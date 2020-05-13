@@ -21,6 +21,7 @@ thing for us. As we know, there are many models for classifying data. In order t
 which model’s classification task performance is the best, we try to have a
 comparison of different models among LDA, CNN & RNN and measure them by
 calculating precision, recall, and f1-score etc.
+
 **_2. Literature review_**
     For our news classification project, we had some research on implementing text
 classification. LDA is a generative probabilistic model for collections of discrete data
@@ -38,8 +39,6 @@ picked RNN as the standard model to implement text classification tasks. Moreove
 convolutional neural network is generally used for Image recognition and object
 classification tasks, so we put more effort on reading through papers discussing
 using CNN for text classification. By doing the embeddings to text, we were able to
-
-
 form the input as a 64 * 6000 matrix to represent our text data where 64 is the
 number of dimensions, and 6000 are the maximum word for our model. For more
 information, the input of the RNN model are processed embeddings of vector shape,
@@ -61,15 +60,9 @@ hidden layers for feature extraction and output layer for classification. In hid
 layers, we will do the Convolution, ReLU and Mas Pooling.
 
 
-Recurrent Neural Networks (RNN) is
-a very important
-variant of neural
-networks heavily
-used in Natural
-Language
-
-
-Processing. In a general neural network, an input is processed through a number of
+Recurrent Neural Networks (RNN) is a very important variant of neural
+networks heavily used in Natural Language Processing. 
+In a general neural network, an input is processed through a number of
 layers and an output is produced, with an assumption that two successive inputs are
 independent of each other.
 
@@ -123,34 +116,26 @@ better accuracy. The result of the CNN and RNN were very good.
 
 We used 10 different topics news dataset, hence, when modeling the LDA, we set the
 number of topics as 10. However, it seemed to cause problems. From the table below,
-
 we could notice the number of news in each topic is not equal to 1300. It seems the
 LDA model did not agree with the topic human-defined. For the “topic 3”, in the
 table below, we could find the number of texts were only 707, and there were words
-
 related to “sports”. Meanwhile, in the “topic 9” there were only 571 texts and the
 words were also related to “sports”. The LDA model classified the original sport
-
 topic into 2 different topics. For the “topic 8”, the number of news texts were 2695,
 the words were related to “fashion” and “entertainment”. The LDA model combined
-
 the “fashion” and “entertainment” to one topic. It is surmised that the result
 happened because some of topics might be highly related at first, the words used in
-
-
 the texts were common, and different types of noun, such as “name”, “jargon”,etc.,
-
 were received differently in the model.
-Since the LDA model generated without data labeling. The situation could not be
 
+Since the LDA model generated without data labeling. The situation could not be
 avoided, but it could be improved. For instance, words selecting and topic selecting
 might be important in the beginning process, besides adjusts parameters in the LDA
 model. No labeling is the nature of the unsupervised model, It can’t be trained to be
-
 as precise as supervised model when involving human-defined subject. However, it
 is still useful and valuable when it comes to unlabeled data classification and
-
 underlying theme discovering.
+
 a. CNN & RNN
 We did not have the clue that why the CNN model has the highest accuracy
 and the least training time. The training time interval from CNN model is
