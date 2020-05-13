@@ -74,14 +74,17 @@ layers and an output is produced, with an assumption that two successive inputs 
 independent of each other.
 
 4. **_Implementation_**
+
++ LDA
+
 The LDA were used to do the unsupervised learning classification. All the data was
 preprocessed fisrt (tokenization, stopwords and punctuation removed, and POS
 tag ”N” remained). And then the data was vectorized and classified, which the
 phases repeated trials and errors to find the best parameters for performing in this
 study. The figure below shows the whole process.
 
-```
-a. CNN & RNN
++ CNN & RNN
+
 In the embeddings processing part, we had built the vocabulary list and
 named ids for all the words. Then we initialized the words to 64-dimension
 vector and will be trained later in our NN models. In RNN models, we built
@@ -93,16 +96,16 @@ we are using is tensorflow, which provides user to record some detailed part
 in the training such as embeddings PCA illustration, accuracy and loss, model
 graph, etc. The graph presented below are CNN on the left and RNN on the
 right.
-```
+
 
 **_5. Evaluation (describe how you evaluate the system and the results)_**
-    a. LDA
-       Since the method is unsupervised, we evaluated the model by manual
-       comparing the result to the original topics from the resource. We calculated
-       the score of precision, recall and f1-score and printed the confusion matrix for
-       better presentation. And we used LDAvis to find out topics’ keywords to
-       further analyse the model (see the table in appendix). From the evaluation, we
-       could see the performance of the LDA wasn’t good.
+a. LDA
+Since the method is unsupervised, we evaluated the model by manual
+comparing the result to the original topics from the resource. We calculated
+the score of precision, recall and f1-score and printed the confusion matrix for
+better presentation. And we used LDAvis to find out topics’ keywords to
+further analyse the model (see the table in appendix). From the evaluation, we
+could see the performance of the LDA wasn’t good.
 
 
 b. CNN & RNN
@@ -166,10 +169,8 @@ Completion time: RNN > LDA > CNN (29 : 9 : 1).
 To sum up, the CNN was quick and well performed model, it is recommended
 when classifying task.
 
-8. Code (github website)
-https://github.com/alousu0612/Text-Mining-news-classification
 
-9. References
+8. References
 a. [http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in)
 
 - tensorflow/
