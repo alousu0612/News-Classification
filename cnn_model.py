@@ -11,7 +11,7 @@ class TCNNConfig(object):
     num_classes = 10  # 類別數
     num_filters = 256  # 卷積核數目
     kernel_size = 5  # 卷積核尺寸
-    vocab_size = 5000  # 詞彙表達小
+    vocab_size = 5000  # 詞彙表大小
 
     hidden_dim = 128  # 全連接層神經元
 
